@@ -1,0 +1,7 @@
+{
+echo "user odad odd"
+echo "prompt"
+echo "cd $i"
+echo "ls -ltr"
+echo "bye"
+} > ftp.txt

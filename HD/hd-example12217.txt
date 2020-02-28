@@ -1,0 +1,10 @@
+#!/bin/bash
+# File: hd-example12217.txt
+# Embedding variables to Heredoc.
+Start="This is the beginning of the line!"
+Stop="The line ends here!"
+
+cat <<HEREDOC
+Michael said: ${Start}
+Joan said: ${Stop}
+HEREDOC
