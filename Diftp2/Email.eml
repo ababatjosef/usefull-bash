@@ -1,0 +1,116 @@
+Received: from BN6PR04MB0565.namprd04.prod.outlook.com (2603:10b6:5:54::21) by
+ DM6PR04MB6107.namprd04.prod.outlook.com with HTTPS via
+ DM6PR06CA0044.NAMPRD06.PROD.OUTLOOK.COM; Tue, 24 Sep 2019 03:26:11 +0000
+Received: from DM5PR04CA0066.namprd04.prod.outlook.com (2603:10b6:3:ef::28) by
+ BN6PR04MB0565.namprd04.prod.outlook.com (2603:10b6:404:91::7) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2284.25; Tue, 24 Sep 2019 03:26:05 +0000
+Received: from DM3NAM05FT028.eop-nam05.prod.protection.outlook.com
+ (2a01:111:f400:7e51::209) by DM5PR04CA0066.outlook.office365.com
+ (2603:10b6:3:ef::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.2284.20 via Frontend
+ Transport; Tue, 24 Sep 2019 03:26:05 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.27.190)
+ smtp.mailfrom=us-west-2.amazonses.com; appriss.com; dkim=pass (signature was
+ verified) header.d=amazonses.com;appriss.com; dmarc=fail action=none
+ header.from=pmp.appriss.com;compauth=pass reason=101
+Received-SPF: Pass (protection.outlook.com: domain of us-west-2.amazonses.com
+ designates 54.240.27.190 as permitted sender)
+ receiver=protection.outlook.com; client-ip=54.240.27.190;
+ helo=a27-190.smtp-out.us-west-2.amazonses.com;
+Received: from a27-190.smtp-out.us-west-2.amazonses.com (54.240.27.190) by
+ DM3NAM05FT028.mail.protection.outlook.com (10.152.98.139) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.2305.15 via Frontend Transport; Tue, 24 Sep 2019 03:26:04 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1569295563;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=J5Wtn/W+dLC+eG0P2T7+OYbNvIMicejIyWoE0DexgvA=;
+	b=gWpMKZrv7kCU6N58+byzKBZiNle8IOBjX47qm19/KSm9dDJ8QE9EGHjwy4nP+voy
+	28t0zV63k1NRdoSr73CrIp2+1VukPuGnKa5v6W1q+9knvSiWCrJj0rqqmqfYVrZGmgG
+	eV6aEg6PGnx1ngk9KxTnXV9cBSLj8sWBuwQNHMnA=
+From: diftp@pmp.appriss.com
+To: awsadmin@appriss.com, jheath@appriss.com, skeller@appriss.com,
+	rbreen@appriss.com
+Subject: PMP dataplane1 DIFTP Old Files Found
+MIME-Version: 1.0
+Message-ID: <0101016d614dfb87-8bf03a23-546a-479e-936b-430bac5ec7dd-000000@us-west-2.amazonses.com>
+Date: Tue, 24 Sep 2019 03:26:03 +0000
+X-SES-Outgoing: 2019.09.24-54.240.27.190
+Feedback-ID: 1.us-west-2.TXBfcLisoc3W7oFCzgK+4tCK/elwLimPUwPxxNMUTWk=:AmazonSES
+Return-Path:
+ 0101016d614dfb87-8bf03a23-546a-479e-936b-430bac5ec7dd-000000@us-west-2.amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Sep 2019 03:26:04.9940
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 10fbbf6b-18a5-46ba-1c4d-08d7409eeeb3
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 9516b679-4458-4fde-9b67-3b7e4ecd2d2d:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Office365-Filtering-HT: Tenant
+X-Forefront-Antispam-Report:
+ CIP:54.240.27.190;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(4636009)(1496009)(286005)(189003)(199004)(8156004)(956004)(230700001)(26005)(50466002)(9686003)(6486002)(90596002)(79850400001)(246002)(966005)(75640400001)(1096003)(4006050)(47776003)(7406005)(7596002)(6306002)(23676004)(7636002)(7696005)(305945005)(8676002)(16003)(7416002)(36736006)(36906005)(6506007)(25786009)(34756004)(356004)(4744005)(336012)(71280400001)(486006)(476003)(126002)(42882007)(106002);DIR:INB;SFP:;SCL:1;SRVR:BN6PR04MB0565;H:a27-190.smtp-out.us-west-2.amazonses.com;FPR:;SPF:Pass;LANG:en;PTR:a27-190.smtp-out.us-west-2.amazonses.com;MX:1;A:1;
+X-MS-Exchange-Organization-AuthSource:
+ DM3NAM05FT028.eop-nam05.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 10fbbf6b-18a5-46ba-1c4d-08d7409eeeb3
+X-Microsoft-Antispam:
+ BCL:4;PCL:0;RULEID:(2390118)(7020095)(4652040)(5600167)(711020)(4605104)(8001031)(1405096)(4618075)(71702078);SRVR:BN6PR04MB0565;
+X-MS-TrafficTypeDiagnostic: BN6PR04MB0565:|BN6PR04MB0565:
+X-MS-Exchange-PUrlCount: 1
+X-MS-Exchange-Transport-Forked: True
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Oob-TLC-OOBClassifiers: OLM:4125;
+X-MS-Exchange-Organization-SCL: 1
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Sep 2019 03:26:04.7028
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 10fbbf6b-18a5-46ba-1c4d-08d7409eeeb3
+X-MS-Exchange-CrossTenant-Id: 9516b679-4458-4fde-9b67-3b7e4ecd2d2d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN6PR04MB0565
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:06.7395075
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2284.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?6EyFqDIAK1Qryo4GViWLXb4OCbzZWylRSS0ncM6W3uVmW6iXLyqYgY92WL2U?=
+ =?us-ascii?Q?lo0TbhR4CoOUhmj1/y5bKgNlZdb+T0wyVh+NLwgfIwNJEcltksF51F1V588V?=
+ =?us-ascii?Q?feo5Lw4z9/s5MWS4B794XFawAkt8n6CdYzYVgLmZ4mIArGXDlnjeLwIeBEsx?=
+ =?us-ascii?Q?PbOX8dZMmaZ564Mj3aPz9iTL79JrsuFIskaNF6QVYPkRb4OoiwoucOoDw80i?=
+ =?us-ascii?Q?cbnwAwMwB+enm6J3YwAx1R+wZJ/wXSyuyrKlfRpBMgSdlL0wcei2fbgmwBKn?=
+ =?us-ascii?Q?BUeUc+qib5HhymsSuDCatJx3d07xAsdSg0G7jIzSAMXhCO63qy0iO8scuPdd?=
+ =?us-ascii?Q?DVF3m9l4pohQeu/5H8WL56O3JTN3RfySOWc40pI19LsHgR6xmyrABOmnyTLh?=
+ =?us-ascii?Q?b9ptCiW1wmt/0vdhIFChiAQf/QZIPfIspkP6ArMPnzle50P1382y+ripwRws?=
+ =?us-ascii?Q?p1UVn3h+7ksSUIPHo+UscNZEi+xo/K/ttaaJPgDNSB+f6d6+YP8epVv8lvi5?=
+ =?us-ascii?Q?SeEyCUHbH0/o+c97mPuO7Gn+POu7T1fOBfjoHc9XdZ10JUD/4X9n9l6CT/la?=
+ =?us-ascii?Q?EvcKFR693JF7tq6H23MCLXgkk6+xZ1wVe7gfzVsap3LSVZqQwZ5TZTN/OHbj?=
+ =?us-ascii?Q?lsQ9+VVP0F0jgI68Ev3hXJ0ge87IHj4pGogLItkG2VM6OOmtnaqPBFOULyw+?=
+ =?us-ascii?Q?ViJvpKLzIPb+PKzLV99DuutZvN4OuEq+4WHHt7CrNk9SymfQnFtNhX450UJe?=
+ =?us-ascii?Q?j2psV4K3ZP4W8UMkgPgIurU1C+vo31u/1GzEQBquIzXB+ilgvf3v/Ncqv90i?=
+ =?us-ascii?Q?HXwtePET1pqkuD2nh5HQCJqef46WRp394jcJZULb9/h27ZxGumZVNXaDFgRt?=
+ =?us-ascii?Q?Ars5A+vGdEckADQ0A0ZavugGOiU5p8+yVjb0CALgCdpcf5t55w90lXp9a9s7?=
+ =?us-ascii?Q?fSPM/2cSwj0M3xWmBer2Tppb7injflIENZXgZqoouPm4jIyag4ao7SE88wD+?=
+ =?us-ascii?Q?k8er+7Hyq8ySHZcR+pCpK/LjHCEQmVPcKacsIHlYGWjufar5ANzCYL09WgWU?=
+ =?us-ascii?Q?Snn2kY8syfbH/cfEqATtTYKiRxt4kc/VTgg3kNRL+wLFTqsBg2eEe653nkR9?=
+ =?us-ascii?Q?3VTKm6G1hIU0i5OK1udjXM9uIvbMeK+67vsH/WDcDMIbIOT4Kd6O8VS2cczt?=
+ =?us-ascii?Q?i2Xa/9PmUrhPz7sqvk2mq15DK/6s5qGUFlv0VI/6LAVljrHFzagx6V7MoxU?=
+ =?us-ascii?Q?=3D?=
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: 7bit
+
+Found 4 files that are older than 32 hours in the prodpmpsftp slice. Files are listed below:
+
+Documentation on how to address common issues.
+
+https://wiki.sdlc.appriss.com/display/PMPCLEAR/DIFTP+Troubleshooting
+ /slices/prodpmpsftp/pharm7089195641@prodpmpsftp/homedir/.ssh/{2030369E-6E32-4875-B6C5-DCF3DE913249}_20190921_035656.dat   size: 523
+/slices/prodpmpsftp/pharm7089195641@prodpmpsftp/homedir/OH/[408501A6-E349-46BE-9596-AFB01EEE929A}_20190921_040435.dat   size: 521
+/slices/prodpmpsftp/pharm7089195641@prodpmpsftp/homedir/.ssh/{49808999-46BE-4FE1-984F-83C105720444]_20190921_034922.dat   size: 505
+/slices/prodpmpsftp/pharm7089195641@prodpmpsftp/homedir/OH/[61503481-788C-4479-8C89-EAD8C16116CE]_20190921_034922.dat   size: 505
+
