@@ -1,2 +1,43 @@
 # Convert spaces to comma.
 	sed -e 's/\s\+/,/g'
+
+# check Var if set or unset
+	 if [ -z ${SSH+x} ]; then echo "var is unset"; else echo "SSH is set to '$SSH'"; fi
+
+# Email Validation:
+<--
+	read email
+	if echo "${email}" | grep '^[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]*$' >/dev/null; then
+    	echo good
+	else
+    	echo bad
+	fi
+-->
+
+# Grab the last word:
+	awk '{print $NF}' /path/to/File
+
+# Append variables:
+	S="502"
+	S="${S}439"
+	S="${S}7067"
+	echo $S
+		5024397067
+	
+# Heredoc
+cat <<ADDTEXT
+The quick
+brown fox
+jumps over
+the lazy
+Dog!
+ADDTEXT
+
+# Multiline comment
+<<COMMENT
+    This is a multiple line comment
+    In Bash Scripting
+COMMENT
+
+
+
