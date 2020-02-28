@@ -1,0 +1,2 @@
+# Convert spaces to comma.
+	sed -e 's/\s\+/,/g'
